@@ -17,10 +17,10 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('https://0sqoqw260g.execute-api.us-east-1.amazonaws.com/dev/login', bodyData, headers);
+      const response = await axios.post('https://xzvbd8tg1i.execute-api.us-east-1.amazonaws.com/dev/login', bodyData, headers);
       console.log(response);
       setErrorMessage('Login Successful');
-      navigate('/add-task');
+      navigate('/todo-list');
     } catch (error) {
       console.error('Error:', error);
       setErrorMessage(error.message || 'An error occurred');

@@ -6,7 +6,9 @@ const TodoForm = () => {
     description: '',
     endDate: '',
     priority: 'medium',
-    email: 'bhunsadiya.ca@gmail.com'
+    email: 'bhunsadiya.ca@gmail.com',
+    completed: false,
+    deleted: false
   });
 
   const handleInputChange = (e) => {
@@ -18,7 +20,7 @@ const TodoForm = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('https://0sqoqw260g.execute-api.us-east-1.amazonaws.com/dev/create-task', {
+      const response = await fetch('https://xzvbd8tg1i.execute-api.us-east-1.amazonaws.com/dev/create-task', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -34,7 +36,9 @@ const TodoForm = () => {
           description: '',
           endDate: '',
           priority: 'medium',
-          email: 'bhunsadiya.ca@gmail.com'
+          email: 'bhunsadiya.ca@gmail.com',
+          completed: false,
+          deleted: false
         });
       } else {
         console.error('Failed to create task');

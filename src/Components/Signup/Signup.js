@@ -23,7 +23,7 @@ const Signup = () => {
   const handleSignup = async () => {
     try {
       const response = await axios.post(
-        'https://0sqoqw260g.execute-api.us-east-1.amazonaws.com/dev/signup',
+        'https://xzvbd8tg1i.execute-api.us-east-1.amazonaws.com/dev/signup',
         formData
       );
 
